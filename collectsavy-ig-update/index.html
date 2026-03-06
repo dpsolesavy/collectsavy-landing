@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CollectSavy — The Collectibles App You've Been Waiting For</title>
+<meta name="description" content="Track release dates. Get restock alerts. Never miss a drop. CollectSavy is coming soon — the ultimate app for Pokemon cards, sports cards, toys, and more.">
+<!-- Open Graph (Facebook, LinkedIn, iMessage, etc.) -->
+<meta property="og:title" content="CollectSavy — The Collectibles App You've Been Waiting For">
+<meta property="og:description" content="Track release dates. Get restock alerts. Never miss a drop. The ultimate app for Pokemon cards, sports cards, toys, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://collectsavy.com">
+<meta property="og:image" content="https://collectsavy.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CollectSavy — The Collectibles App">
+<meta property="og:site_name" content="CollectSavy">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CollectSavy — The Collectibles App You've Been Waiting For">
+<meta name="twitter:description" content="Track release dates. Get restock alerts. Never miss a drop. The ultimate app for Pokemon cards, sports cards, toys, and more.">
+<meta name="twitter:image" content="https://collectsavy.com/assets/og-image.png">
+<meta name="twitter:image:alt" content="CollectSavy — The Collectibles App">
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#1565C0">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://collectsavy.com">
+
+<!-- Fonts: Clash Display (display) + Satoshi (body) from Fontshare -->
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="./base.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="#" class="site-header__logo" aria-label="CollectSavy Home">
+        <img src="./assets/logo.png" alt="CollectSavy logo — a 3D isometric cube in blue tones" width="40" height="40">
+        <span class="site-header__logo-text">CollectSavy</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <a href="https://store.solesavy.com" target="_blank" rel="noopener noreferrer" class="site-header__link">Shop</a>
+        <a href="https://www.instagram.com/collectsavy_" target="_blank" rel="noopener noreferrer" class="site-header__link site-header__ig" aria-label="Follow us on Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <!-- Dark mode toggle (hidden for now)
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        -->
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <!-- Notification alert -->
+        <div class="hero__notif fade-in">
+          <div class="hero__notif-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <div class="hero__notif-text">
+            <span class="hero__notif-label">Restock Alert</span>
+            <span class="hero__notif-msg">Restock: Prismatic Elite Trainer Box - $69.99</span>
+          </div>
+        </div>
+
+        <img src="./assets/collecticon-white.png" alt="CollectSavy" class="hero__logo fade-in">
+        <h1 class="hero__title fade-in">The Collectibles App You've Been Waiting For</h1>
+        <p class="hero__subtitle fade-in">Track release dates. Get restock alerts. Never miss a drop. CollectSavy is coming soon.</p>
+
+        <div class="hero__form-wrapper">
+          <form id="signup-form" class="hero__form" method="POST" action="https://solesavy.activehosted.com/proc.php" novalidate>
+            <input type="hidden" name="u" value="69AB3DCFD48FF">
+            <input type="hidden" name="f" value="105">
+            <input type="hidden" name="s">
+            <input type="hidden" name="c" value="0">
+            <input type="hidden" name="m" value="0">
+            <input type="hidden" name="act" value="sub">
+            <input type="hidden" name="v" value="2">
+            <input type="hidden" name="or" value="927e96ca-807d-4596-8324-8fb4b663a022">
+            <label for="email-input" class="sr-only">Email address</label>
+            <input
+              type="text"
+              id="email-input"
+              name="email"
+              class="hero__input"
+              placeholder="Enter your email"
+              required
+              autocomplete="email"
+              aria-describedby="email-error"
+            >
+            <button type="submit" class="btn btn--primary">Notify Me</button>
+          </form>
+        </div>
+
+        <div class="hero__error" id="email-error" role="alert" aria-live="polite"></div>
+        <div class="hero__success" role="status" aria-live="polite">You're on the list! We'll let you know when CollectSavy launches.</div>
+
+        <p class="hero__note">Be the first to know when we launch.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <img src="./assets/product-1.png" alt="" class="marquee__item">
+        <img src="./assets/product-2.png" alt="" class="marquee__item">
+        <img src="./assets/product-3.png" alt="" class="marquee__item">
+        <img src="./assets/product-4.png" alt="" class="marquee__item">
+        <img src="./assets/product-5.png" alt="" class="marquee__item">
+        <img src="./assets/product-6.png" alt="" class="marquee__item">
+        <img src="./assets/product-7.png" alt="" class="marquee__item">
+        <img src="./assets/product-8.png" alt="" class="marquee__item">
+        <img src="./assets/product-9.png" alt="" class="marquee__item">
+        <img src="./assets/product-10.png" alt="" class="marquee__item">
+        <img src="./assets/product-11.png" alt="" class="marquee__item">
+        <img src="./assets/product-12.png" alt="" class="marquee__item">
+        <!-- Duplicate for seamless loop -->
+        <img src="./assets/product-1.png" alt="" class="marquee__item">
+        <img src="./assets/product-2.png" alt="" class="marquee__item">
+        <img src="./assets/product-3.png" alt="" class="marquee__item">
+        <img src="./assets/product-4.png" alt="" class="marquee__item">
+        <img src="./assets/product-5.png" alt="" class="marquee__item">
+        <img src="./assets/product-6.png" alt="" class="marquee__item">
+        <img src="./assets/product-7.png" alt="" class="marquee__item">
+        <img src="./assets/product-8.png" alt="" class="marquee__item">
+        <img src="./assets/product-9.png" alt="" class="marquee__item">
+        <img src="./assets/product-10.png" alt="" class="marquee__item">
+        <img src="./assets/product-11.png" alt="" class="marquee__item">
+        <img src="./assets/product-12.png" alt="" class="marquee__item">
+      </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" aria-labelledby="features-heading">
+      <div class="container">
+        <p class="section-label fade-in">What's Coming</p>
+        <h2 id="features-heading" class="section-heading fade-in">Everything You Need to Stay Ahead</h2>
+
+        <div class="features__grid">
+          <!-- Card 1: Release Calendar -->
+          <article class="feature-card fade-in">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Release Calendar</h3>
+            <p class="feature-card__desc">Never miss a drop. Track upcoming release dates for trading cards from Pokemon, Topps, Panini, and more. Plus toys from McFarlane, Marvel Legends, and beyond.</p>
+          </article>
+
+          <!-- Card 2: Personalized Alerts -->
+          <article class="feature-card fade-in">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Personalized Alerts</h3>
+            <p class="feature-card__desc">Set up custom notifications for the brands and categories you care about. Get alerted when items release or restock — so you never miss out again.</p>
+          </article>
+
+          <!-- Card 3: All Collectibles, One Place -->
+          <article class="feature-card fade-in">
+            <div class="feature-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"/>
+                <rect x="14" y="3" width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3" y="14" width="7" height="7"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">All Collectibles, One Place</h3>
+            <p class="feature-card__desc">From trading cards to action figures, sneakers to vinyl — track everything in the world of new and vintage collectibles from a single app.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALERTS SPOTLIGHT SECTION -->
+    <section class="spotlight fade-in" aria-labelledby="spotlight-heading">
+      <div class="spotlight__inner">
+        <div class="spotlight__content">
+          <p class="spotlight__label">Smart Alerts</p>
+          <h2 id="spotlight-heading" class="spotlight__heading">Never Miss a Restock</h2>
+          <p class="spotlight__body">Our smart alerts system lets you personalize your notifications. Choose the brands, categories, and items you love — and we'll make sure you know the moment they drop or come back in stock. No more refreshing pages. No more sold-out disappointments.</p>
+          <a href="#hero" class="spotlight__cta">
+            Get Early Access
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="spotlight__visual" aria-hidden="true">
+          <div class="notif-card">
+            <div class="notif-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>
+            </div>
+            <div class="notif-card__text">
+              <span class="notif-card__title">Pokemon TCG Restock</span>
+              <span class="notif-card__sub">Scarlet &amp; Violet — Now Available</span>
+            </div>
+          </div>
+          <div class="notif-card">
+            <div class="notif-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="notif-card__text">
+              <span class="notif-card__title">New Release Tomorrow</span>
+              <span class="notif-card__sub">Topps Chrome 2026 — Mar 7</span>
+            </div>
+          </div>
+          <div class="notif-card">
+            <div class="notif-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="notif-card__text">
+              <span class="notif-card__title">Price Alert</span>
+              <span class="notif-card__sub">Marvel Legends — 20% Off</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP CTA SECTION -->
+    <section class="shop-cta fade-in" aria-labelledby="shop-heading">
+      <div class="container container--narrow">
+        <img src="./assets/shop-preview.png" alt="A collection of popular collectibles including Pokemon, Panini, Disney Lorcana, and more" class="shop-cta__image fade-in">
+        <h2 id="shop-heading" class="shop-cta__heading">Shop While You Wait</h2>
+        <p class="shop-cta__text">Browse our curated selection of collectibles at the SoleSavy Store.</p>
+        <a href="https://store.solesavy.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large">Visit the Store</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__logo">
+        <img src="./assets/logo.png" alt="" width="32" height="32" aria-hidden="true">
+        <span class="site-footer__logo-text">CollectSavy</span>
+      </div>
+      <p class="site-footer__tagline">Coming Soon</p>
+      <nav aria-label="Footer navigation">
+        <ul class="site-footer__links" role="list">
+          <li><a href="https://store.solesavy.com" target="_blank" rel="noopener noreferrer">Store</a></li>
+          <li><a href="https://solesavy.com" target="_blank" rel="noopener noreferrer">SoleSavy</a></li>
+          <li><a href="https://www.instagram.com/collectsavy_" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+      </nav>
+      <div class="site-footer__bottom">
+        <span>&copy; 2026 CollectSavy. All rights reserved.</span>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="./app.js" defer></script>
+</body>
+</html>
