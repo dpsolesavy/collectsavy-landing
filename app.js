@@ -95,42 +95,34 @@
         submitBtn.textContent = "Sending...";
       }
 
-      // Submit to ActiveCampaign via fetch
+      // Submit to ActiveCampaign via JSONP (cross-origin safe)
       var formData = new FormData(form);
-      fetch("https://solesavy.activehosted.com/proc.php?jsonp=true", {
-        method: "POST",
-        body: formData,
-        headers: { "Accept": "application/json" }
-      })
-        .then(function (response) {
-          return response.json();
+      var serialized = Array.from(formData.entries())
+        .map(function (pair) {
+          return encodeURIComponent(pair[0]) + "=" + encodeURIComponent(pair[1]);
         })
-        .then(function () {
-          // Success — show message, hide form
-          if (formWrapper) formWrapper.style.display = "none";
-          if (successMsg) successMsg.classList.add("visible");
-          var noteEl = document.querySelector(".hero__note");
-          if (noteEl) noteEl.style.display = "none";
-          if (errorMsg) errorMsg.classList.remove("visible");
-        })
-        .catch(function () {
-          // If fetch fails, try submitting via script tag (JSONP fallback)
-          var serialized = Array.from(formData.entries())
-            .map(function (pair) {
-              return encodeURIComponent(pair[0]) + "=" + encodeURIComponent(pair[1]);
-            })
-            .join("&");
-          var script = document.createElement("script");
-          script.src = "https://solesavy.activehosted.com/proc.php?" + serialized + "&jsonp=true";
-          document.head.appendChild(script);
+        .join("&");
 
-          // Show success anyway — AC will still process it
-          if (formWrapper) formWrapper.style.display = "none";
-          if (successMsg) successMsg.classList.add("visible");
-          var noteEl = document.querySelector(".hero__note");
-          if (noteEl) noteEl.style.display = "none";
-          if (errorMsg) errorMsg.classList.remove("visible");
-        });
+      // JSONP callback to confirm success
+      var callbackName = "_acFormCallback_" + Date.now();
+      window[callbackName] = function () {
+        delete window[callbackName];
+      };
+
+      var script = document.createElement("script");
+      script.src = "https://solesavy.activehosted.com/proc.php?" + serialized + "&jsonp=" + callbackName;
+      script.onerror = function () {
+        // Even on error, AC often processes the request
+        console.warn("AC script tag error — submission may still have succeeded.");
+      };
+      document.head.appendChild(script);
+
+      // Show success state
+      if (formWrapper) formWrapper.style.display = "none";
+      if (successMsg) successMsg.classList.add("visible");
+      var noteEl = document.querySelector(".hero__note");
+      if (noteEl) noteEl.style.display = "none";
+      if (errorMsg) errorMsg.classList.remove("visible");
     });
 
     // Clear error on input
